@@ -1,7 +1,7 @@
 # FRC-Scouting-App
 *^ replace with clever name*
 
-Web app to collect FRC scouting information from multiple users and store in MySQL database.\
+Web app to collect FRC scouting information from multiple simultaneous users and store in MySQL database.
 
 **Current Features:**
 
