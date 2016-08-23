@@ -5,8 +5,8 @@ Web app to collect FRC scouting information from multiple simultaneous users and
 
 **Current Features:**
 
-* Collects data submited through HTML forms and writes to MySQL sheet
-* Display data from MySQL sheet in HTML table
+* Collects data submited through HTML forms and writes to MySQL table
+* Display data from MySQL table in HTML table
 
 **Planned Features:**
 
