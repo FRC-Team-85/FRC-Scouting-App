@@ -1,30 +1,30 @@
-<!DOCTYPE html>
-<html lang = "en-US">
- <head>
- <meta charset = "UTF-8">
- <title>contact.php</title>
+<head>
+    
  <style type = "text/css">
-  table, th, td {border: 1px solid black};
+    table, th, td {border: 1px solid black};
  </style>
- </head>
- <body>
- <p>
+    
+</head>
+
+     
  <?php
+     
   try {
+       
   $con= new PDO('mysql:host=localhost;dbname=scout', "root", "pass");
   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
   $query = "SELECT matchnum, team, score FROM one";
-  //first pass just gets the column names
+      
   print "<table>";
-  $result = $con->query($query);
-  //return only the first row (we only need field names)
-  $row = $result->fetch(PDO::FETCH_ASSOC);
+      
   print " <tr>";
-  foreach ($row as $field => $value){
-   print " <th>$field</th>";
-  } // end foreach
+    print " <th>Match Number</th>";
+    print " <th>Team</th>";
+    print " <th>Score</th>";
   print " </tr>";
-  //second query gets the data
+      
+  //get the data
   $data = $con->query($query);
   $data->setFetchMode(PDO::FETCH_ASSOC);
   foreach($data as $row){
@@ -37,8 +37,6 @@
   print "</table>";
   } catch(PDOException $e) {
    echo 'ERROR: ' . $e->getMessage();
-  } // end try
+  }
+     
  ?>
- </p>
- </body>
-</html>
