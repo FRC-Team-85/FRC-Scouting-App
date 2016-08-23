@@ -10,3 +10,4 @@ Web app to collect FRC scouting information from multiple simultaneous users and
 
 **Planned Features:**
 
+* Mobile-friendly UI
