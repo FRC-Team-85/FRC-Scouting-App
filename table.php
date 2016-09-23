@@ -10,38 +10,33 @@
     </ul>
     
     <div id = "main">
-         <?php
+        <?php
 
-          try {
+            $handler = new PDO('mysql:host=localhost;dbname=scout', 'root', 'raspberry');
+            $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-          $con= new PDO('mysql:host=localhost;dbname=scout', "root", "pass");
-          $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "<table>";
 
-          $query = "SELECT matchnum, team, score FROM one";
+                echo " <tr>";
+                    echo " <th>Match Number</th>";
+                    echo " <th>Team</th>";
+                    echo " <th>Score</th>";
+                echo " </tr>";
 
-          print "<table>";
+                    $data = $handler->query("SELECT matchnum, team, score FROM one");
+                    $data->setFetchMode(PDO::FETCH_ASSOC);
 
-          print " <tr>";
-            print " <th>Match Number</th>";
-            print " <th>Team</th>";
-            print " <th>Score</th>";
-          print " </tr>";
+                foreach($data as $row){
+                    echo " <tr>";
+                        foreach ($row as $name){
+                            echo " <td>$name</td>";
+                        }
+                    echo " </tr>";
+                }
 
-          //get the data
-          $data = $con->query($query);
-          $data->setFetchMode(PDO::FETCH_ASSOC);
-          foreach($data as $row){
-           print " <tr>";
-           foreach ($row as $name=>$value){
-           print " <td>$value</td>";
-           } // end field loop
-           print " </tr>";
-          } // end record loop
-          print "</table>";
-          } catch(PDOException $e) {
-           echo 'ERROR: ' . $e->getMessage();
-          }
+            echo "</table>";
 
-         ?>
+        ?>
     </div>
+    
 </body>
