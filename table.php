@@ -21,9 +21,10 @@
                     echo " <th>Match Number</th>";
                     echo " <th>Team</th>";
                     echo " <th>Score</th>";
+                    echo " <th>Scale</th>";
                 echo " </tr>";
 
-                    $data = $handler->query("SELECT matchnum, team, score FROM one");
+                    $data = $handler->query("SELECT matchnum, team, score, scale FROM one");
                     $data->setFetchMode(PDO::FETCH_ASSOC);
 
                 foreach($data as $row){
