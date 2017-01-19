@@ -3,11 +3,15 @@
 </head>
 
 <body>
-    
+
+	<img src = "./logo.png" style="display: block; margin: 0 auto; width: auto; max-width: 574px; height: auto; max-height: 263px;">
+	
     <ul>
       <li><a href="index.php">Scout</a></li>
-      <li><a href="table.php" style = "background-color: #4caeae;">Table</a></li>
+      <li><a href="table.php" style = "background-color: #616161;">Table</a></li>
     </ul>
+
+	<br></br>
     
     <div id = "main">
         <?php

@@ -1,5 +1,8 @@
 body, html {
-    margin:0;border:0;padding:0;
+    margin:0;
+	border:0;
+	padding:0;
+	#background-color: #4DD0E1;
 }
 
 ul {
@@ -13,6 +16,7 @@ ul {
 
 li {
     float: left;
+	text-align: center;
 }
 
 li a {
@@ -21,6 +25,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	
 }
 
 li a:hover {
@@ -33,4 +38,9 @@ table, th, td {
 
 #main {
     margin: 15;
+    margin: auto;
+    width: 80%;
+    border: 3px solid black;
+    padding: 10px;
+	background-color: white;
 }

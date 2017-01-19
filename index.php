@@ -4,11 +4,15 @@
 
 <body>
     
+	<img src = "./logo.png" style="display: block; margin: 0 auto; width: auto; max-width: 574px; height: auto; max-height: 263px;">
+	
     <ul>
-      <li><a href="index.php" style = "background-color: #4caeae;">Scout</a></li>
+      <center><li><a href="index.php" style = "background-color: #616161;">Scout</a></li>
       <li><a href="table.php">Table</a></li>
     </ul>
 
+	<br></br>
+	
     <div id = "main">
          <form action="submit.php" method="post" />
 
