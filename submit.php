@@ -9,7 +9,9 @@
     $team = (int)$_POST['team_input'];
     $score = (int)$_POST['score_input'];
     $scale = intval((bool)$_POST['scale_input']); //Converts the boolean to an integer (0 if false, 1 if true)
-
+		//Search function for team number
+	$search = (int)$_POST['search_input'];
+	
     //Sets a string to "No" if $scale equals 0, sets string to "Yes" if $scale equals 1
     if($scale == 0) {
         $scaleString = 'No';

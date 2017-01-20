@@ -14,8 +14,17 @@
 	<br></br>
     
     <div id = "main">
-        <?php
+	
+	<form action="table.php" method="post" />
+
+            <p>Search Team Number: <input type="int" name="search_input" /></p>
             
+            <input type="submit" value="Submit" />
+
+        </form>
+
+	   <?php
+			
             //Reusable connection to the MySQL database (probably should be switched to SQLite eventually)
             $handler = new PDO('mysql:host=localhost;dbname=scout', 'root', 'raspberry');
             $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -25,15 +34,20 @@
 
                 echo " <tr>";
                     echo " <th>Match Number</th>";
-                    echo " <th>Team</th>";
+                    echo " <th>Team Number</th>";
                     echo " <th>Score</th>";
                     echo " <th>Scale</th>";
                 echo " </tr>";
             
                     //Sets $data to the data retrived by the defined query
-                    $data = $handler->query("SELECT matchnum, team, score, scale FROM one");
-                    $data->setFetchMode(PDO::FETCH_ASSOC);
-
+                    if ($search != 0) {
+						$data = $handler->query("SELECT matchnum, teamnum, score, scale FROM one WHERE teamnum == search_input");
+						$data->setFetchMode(PDO::FETCH_ASSOC);
+					} 
+					else {
+						$data = $handler->query("SELECT matchnum, teamnum, score, scale FROM one");
+						$data->setFetchMode(PDO::FETCH_ASSOC);
+					}
                 //Adds a table rows as needed and fills in table cells with data from database
                 foreach($data as $row){
                     echo " <tr>";
