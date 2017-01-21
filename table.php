@@ -34,18 +34,18 @@
 
                 echo " <tr>";
                     echo " <th>Match Number</th>";
-                    echo " <th>Team Number</th>";
+                    echo " <th>Team</th>";
                     echo " <th>Score</th>";
                     echo " <th>Scale</th>";
                 echo " </tr>";
             
                     //Sets $data to the data retrived by the defined query
                     if ($search != 0) {
-						$data = $handler->query("SELECT matchnum, teamnum, score, scale FROM one WHERE teamnum == search_input");
+						$data = $handler->query("SELECT matchnum, team, score, scale FROM one WHERE team == search_input");
 						$data->setFetchMode(PDO::FETCH_ASSOC);
 					} 
 					else {
-						$data = $handler->query("SELECT matchnum, teamnum, score, scale FROM one");
+						$data = $handler->query("SELECT matchnum, team, score, scale FROM one");
 						$data->setFetchMode(PDO::FETCH_ASSOC);
 					}
                 //Adds a table rows as needed and fills in table cells with data from database
