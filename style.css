@@ -2,7 +2,7 @@ body, html {
     margin:0;
 	border:0;
 	padding:0;
-	#background-color: #4DD0E1;
+	background-color: #015a9c;
 }
 
 ul {
@@ -42,5 +42,39 @@ table, th, td {
     width: 80%;
     border: 3px solid black;
     padding: 10px;
-	background-color: white;
+	background-color: white;\
+}
+
+h1 {
+    
+    text-align: center;
+    font-family: calibri;
+    font-size: 55pt;
+    color: yellow;
+    padding-top: 50px;
+    
+}
+
+input[type="int"] {
+    height: 50px;
+    width: 100%;
+    font-size: 100%;
+}
+
+input[type="checkbox"] {
+    height: 7%;
+    width: 7%;
+}
+
+input[type="submit"] {
+    height: 4%;
+    width: 100%;
+    
+}
+
+h2 {
+   
+    font-family: calibri;
+    font-weight: bold;
+    
 }

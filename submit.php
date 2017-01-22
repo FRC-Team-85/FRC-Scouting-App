@@ -1,7 +1,7 @@
 <?php
     
-    //Reusable connection to the MySQL database (probably should be switched to SQLite eventually)
-    $handler = new PDO('mysql:host=localhost;dbname=scout', 'root', 'raspberry');
+    //Reusable connection to the sqlite database
+    $handler = new PDO('sqlite:scout.db');
     $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Retreives the data inputted by the user and sets them to variables
@@ -9,9 +9,7 @@
     $team = (int)$_POST['team_input'];
     $score = (int)$_POST['score_input'];
     $scale = intval((bool)$_POST['scale_input']); //Converts the boolean to an integer (0 if false, 1 if true)
-		//Search function for team number
-	$search = (int)$_POST['search_input'];
-	
+
     //Sets a string to "No" if $scale equals 0, sets string to "Yes" if $scale equals 1
     if($scale == 0) {
         $scaleString = 'No';
@@ -44,7 +42,7 @@
 
          <script>
         function goHome() {
-            location.href=\"http://craigsmith.duckdns.org\";
+            location.href=\"localhost\";
         }
         </script>";
     }
