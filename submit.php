@@ -1,7 +1,7 @@
 <?php
     
-    //Reusable connection to the MySQL database (probably should be switched to SQLite eventually)
-    $handler = new PDO('mysql:host=localhost;dbname=scout', 'root', 'raspberry');
+    //Reusable connection to the sqlite database
+    $handler = new PDO('sqlite:scout.db');
     $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Retreives the data inputted by the user and sets them to variables
@@ -42,7 +42,7 @@
 
          <script>
         function goHome() {
-            location.href=\"http://craigsmith.duckdns.org\";
+            location.href=\"localhost\";
         }
         </script>";
     }
