@@ -14,12 +14,25 @@
 	<br></br>
 	
     <div id = "main">
+        <form action="table.php" method="post"/>
+			
+			<h2>Search Team Number:<h2>
+				<input type="int" name="search_input"/>
+			<br>
+			<center><input type="submit" value="Submit" /></center>
+		
+		</form>
+    </div>
+	
         <?php
             
             //Reusable connection to the sqlite database
             $handler = new PDO('sqlite:scout.db');
             $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+			
+			//Sets search input to a variable (search)
+			$search = (int)$_POST['search_input'];
+			
             //Creates HTML table with headers for each column
             echo "<table>";
 
@@ -31,20 +44,33 @@
                 echo " </tr>";
             
                     //Sets $data to the data retrived by the defined query
-                    $data = $handler->query("SELECT matchnum, team, score, scale FROM one");
-                    $data->setFetchMode(PDO::FETCH_ASSOC);
+                    if (search != 0) {
+						$data = $handler->query("SELECT matchnum, team, score, scale FROM one WHERE teamnum = search");
+					}
+					else {
+						$data = $handler->query("SELECT matchnum, team, score, scale FROM one");
+                    }
+					
+					$data->setFetchMode(PDO::FETCH_ASSOC);
 
                 //Adds a table rows as needed and fills in table cells with data from database
-                foreach($data as $row){
+                
+			function populate() {
+				foreach($data as $row){
                     echo " <tr>";
                         foreach ($row as $name){
                             echo " <td>$name</td>";
                         }
                     echo " </tr>";
                 }
-
-            echo "</table>";
-
+			
+				echo "</table>";
+			}
+			
+			//Should re-execute function populate if submit button is pressed.
+			if(isset($_POST['submit'])) {
+				populate();
+			}
         ?>
     </div>
 
