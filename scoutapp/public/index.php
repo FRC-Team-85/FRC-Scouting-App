@@ -6,10 +6,10 @@
     
     <h1>BOB Scouting</h1>
 	
-    <ul>
-      <center><li><a href="index.php" style = "background-color: #616161;">Scout</a></li>
-      <li><a href="table.php">Table</a></li>
-    </ul>
+    <center><ul>
+      <center><li><a href="index.php" style = "background-color: #52b1c4;">Scout</a></li>
+      <li><a href="table.php">Table</a></li></center>
+    </ul></center>
 
 	<br></br>
 	
@@ -31,3 +31,7 @@
     </div>
 
 </body>
+
+<footer>
+	<p>Built by Built on Brains<p>
+</footer>

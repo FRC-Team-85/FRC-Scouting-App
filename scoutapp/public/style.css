@@ -1,0 +1,92 @@
+body, html {
+    margin:0;
+	border:0;
+	padding:0;
+	background-color: #015a9c;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: #333;
+	width: 80%;
+	max-width: 800px;
+	height: 50px;
+}
+
+li {
+    float: left;
+	text-align: center;
+	width: 50%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	height: 50px;
+}
+
+li a:hover {
+    background-color: black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#main {
+    margin: 15;
+    margin: auto;
+    width: 80%;
+    border: 3px solid black;
+    padding: 10px;
+	background-color: white;\
+}
+
+h1 {
+    
+    text-align: center;
+    font-family: calibri;
+    font-size: 55pt;
+    color: yellow;
+    padding-top: 50px;
+    
+}
+
+footer {
+    text-align: center;
+    font-family: calibri;
+    font-size: 18pt;
+    color: yellow;
+    
+}
+
+input[type="int"] {
+    height: 50px;
+    width: 100%;
+    font-size: 100%;
+}
+
+input[type="checkbox"] {
+    height: 3em;
+    width: 3em;
+}
+
+input[type="submit"] {
+    height: 5%;
+    width: 100%;
+    
+}
+
+h2 {
+   
+    font-family: calibri;
+    font-weight: bold;
+    
+}

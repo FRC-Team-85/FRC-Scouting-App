@@ -1,0 +1,8 @@
+apache-php5:
+    image: nimmis/apache-php5
+    ports:
+        - "80:80"
+        - "8443:8443"
+    volumes:
+        - ./public:/var/www/html
+        - ./apache:/var/log/apache2

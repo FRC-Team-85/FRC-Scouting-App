@@ -12,11 +12,15 @@ ul {
     border: 0;
     overflow: hidden;
     background-color: #333;
+	width: 80%;
+	max-width: 800px;
+	height: 50px;
 }
 
 li {
     float: left;
 	text-align: center;
+	width: 50%;
 }
 
 li a {
@@ -25,7 +29,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-	
+	height: 50px;
 }
 
 li a:hover {
@@ -55,6 +59,14 @@ h1 {
     
 }
 
+footer {
+    text-align: center;
+    font-family: calibri;
+    font-size: 18pt;
+    color: yellow;
+    
+}
+
 input[type="int"] {
     height: 50px;
     width: 100%;
@@ -62,12 +74,12 @@ input[type="int"] {
 }
 
 input[type="checkbox"] {
-    height: 7%;
-    width: 7%;
+    height: 3em;
+    width: 3em;
 }
 
 input[type="submit"] {
-    height: 4%;
+    height: 5%;
     width: 100%;
     
 }

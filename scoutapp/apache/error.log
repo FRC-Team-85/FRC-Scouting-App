@@ -1,0 +1,2 @@
+[Sat Jan 28 01:26:41.348713 2017] [mpm_prefork:notice] [pid 30] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.20 configured -- resuming normal operations
+[Sat Jan 28 01:26:41.349465 2017] [core:notice] [pid 30] AH00094: Command line: '/usr/sbin/apache2'
